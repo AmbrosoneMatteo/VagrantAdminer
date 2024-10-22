@@ -1,8 +1,8 @@
 # VagrantAdminer
 ## Host-Only interface
 
-This code is developed and to be used in a Windows envoirment with oraclevirtualbox, 
-if you want to use this script in a windows envoirment remember to cange the Host-Only adapter
+This code is developed to be used in a Windows environment with Oracle Virtualbox, 
+if you want to use this script in a windows environment remember to cange the Host-Only adapter
 
 ```ruby
  web.vm.network "private_network",ip: "#{BASE_NETWORK}.100", name: "VirtualBox Ethernet Adapter", auto_config: false
@@ -16,18 +16,18 @@ For linux you would have to set something like this:
 
 ### Base Network
 
-The variable 'Base Network' defines the network where you will reach your web-host on the
+The variable 'BASE_NETWORK' defines the network where you will reach your web-host on the
 Host-Only interface at the address .100, to change the network you just need to change it's variable
 
 ## Intnet
 
-The 2 virtual machines are connected trough an internal network with the address 10.10.20.0/24
+The 2 virtual machines are connected through an internal network with the address 10.10.20.0/24
 ## Scripts
 ### web-install.sh
 
-web-install.sh install all the packages necessary to operate an apache webserver with php 8.1 in order to run adminer.php.
-It uses sed to enable the mysql extensions in php.ini to avoid copy an entire configuration file.
-And it adds the db-host entry in the hosts file to be able to reach-it from the web-host trough the hostname
+web-install.sh installs all the packages necessary to operate an apache webserver with php 8.1 in order to run adminer.php.
+It uses sed to enable the mysql extensions in php.ini, to avoid copying an entire configuration file.
+And it adds the db-host entry in the hosts file to be able to reach-it from the web-host through the hostname
 
 ### db-install.sh
 
@@ -45,4 +45,4 @@ SSH key authentication has been disabled due to a problem, if you want to enable
 
 ### Ports
 
-By default vagrant forwards the ssh port on :2222, but with 2 machines it would create a conflict between these 2 machines, so the db port has been forwarded on :2223
+By default vagrant forwards the ssh port on :2222, but with 2 machines it would create a conflict between these 2, so the db port has been forwarded on :2223
