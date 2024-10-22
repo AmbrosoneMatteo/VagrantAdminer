@@ -36,6 +36,10 @@ db-install.sh install mariadb on the db-host and create an user with ALL the pri
     PASS="M1ck3yM0us3"
 ```
 
+### ho-setup.sh
+
+ho-setup.sh changes the neplan configuration file in the web-host machine to set a permanent ipv4 address instead of using the Host-Only DHCP provided By VirtualBox
+
 ## SSH
 
 SSH key authentication has been disabled due to a problem, if you want to enable it remove this line from the VagrantFile

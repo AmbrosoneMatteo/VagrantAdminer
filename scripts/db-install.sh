@@ -17,4 +17,5 @@ PASSCOL="\033[0;41m" #black, red background
 USERCOL="\033[0;42m" #black, green background
 NC="\033[0;0m" #reset colors
 echo -e "Access the database at $USERCOL'192.168.56.110'$NC with the user $USERCOL'user'$NC"
-echo -e "Here's your database password, don't loose it, save it somewhere ==> ${PASSCOL}$PASS${NC}"
+echo $PASS > /vagrant/pass
+echo -e "Here's your database password, don't loose it, it has been saved at /vagrant/pass ==> ${PASSCOL}$PASS${NC}"
